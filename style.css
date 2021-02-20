@@ -1,0 +1,103 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  background-color: rgba(1, 56, 112, 0.3);
+  backdrop-filter: blur(20px) saturate(180%) contrast(45%) brightness(40%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%) contrast(45%) brightness(40%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+@supports (-webkit-backdrop-filter: blur(30px) saturate(160%) contrast(45%) brightness(140%)) or
+  (backdrop-filter: blur(30px) saturate(160%) contrast(45%) brightness(140%)) {
+  .navbar-b.navbar-reduce {
+    transition: all 0.5s ease-in-out;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 100%;
+    background-color: rgba(1, 56, 112, 0.3);
+    backdrop-filter: blur(20px) saturate(180%) contrast(45%) brightness(40%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%) contrast(45%) brightness(40%);
+  }
+}
+
+
+@media {
+    body {
+      background-color: #0a2c4f;
+      color: white;
+}
+
+li {
+  float: left;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #01e08f;
+  border-radius: 100px;
+  box-shadow: 0 5px 15px rgba(1, 224, 143, 2.4);
+}
+
+.active {
+  background-color: #01e08f;
+  border-radius: 100px;
+  box-shadow: 0 5px 15px rgba(1, 224, 143, 2.4);
+}
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+/* How to use : <div class="spinning"></div>*/
+.spinning {
+  animation-name: spin;
+  animation-duration: 1500ms; /* How long lasts 1 turn */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+.ripple{
+  position: relative;
+  overflow: hidden; 
+}
+
+.ripple:before {
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.6);
+  content:'';
+  position: absolute;
+  top: 50%; left: 50%;
+  width:0; height:0;
+}
+
+.ripple:focus:before {
+  transition: all 0.3s ease-out;
+  opacity:0;
+  width:160px;
+  height:160px;
+  margin-top:-80px;
+  margin-left:-80px;
+}

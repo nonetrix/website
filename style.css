@@ -1,7 +1,7 @@
 ul {
   list-style-type: none;
   margin: 0;
-  background-color: rgba(1, 56, 112, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(20px) saturate(180%) contrast(45%) brightness(40%);
   -webkit-backdrop-filter: blur(20px) saturate(180%) contrast(45%) brightness(40%);
   position: fixed;
@@ -17,7 +17,7 @@ ul {
     padding-top: 0px;
     padding-bottom: 0px;
     width: 100%;
-    background-color: rgba(1, 56, 112, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(20px) saturate(180%) contrast(45%) brightness(40%);
     -webkit-backdrop-filter: blur(20px) saturate(180%) contrast(45%) brightness(40%);
   }
@@ -44,15 +44,15 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: #01e08f;
+  background-color: #85B200;
   border-radius: 100px;
-  box-shadow: 0 5px 15px rgba(1, 224, 143, 2.4);
+  box-shadow: 0 5px 15px rgba(133, 178, 0, 2.4);
 }
 
 .active {
-  background-color: #01e08f;
+  background-color: #85B200;
   border-radius: 100px;
-  box-shadow: 0 5px 15px rgba(1, 224, 143, 2.4);
+  box-shadow: 0 5px 15px rgba(133, 178, 0, 2.4);
 }
 
 
